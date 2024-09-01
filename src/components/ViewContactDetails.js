@@ -1,21 +1,16 @@
 // src/components/ViewContactDetails.js
-import React from 'react'
+import React from 'react';
 
-const ViewContactDetails = ({contact}) => {
-  return (
-    <div>
-      <h2>Contact Details</h2>
-      <p>
-        <strong>Name:</strong> {contact.name}
-      </p>
-      <p>
-        <strong>Email:</strong> {contact.email}
-      </p>
-      <p>
-        <strong>Mobile:</strong> {contact.mobile}
-      </p>
-    </div>
-  )
-}
+const ViewContactDetails = ({ contact, onClose }) => {
+    return (
+        <div className="view-contact-details">
+            <h2>Contact Details</h2>
+            <p><strong>Name:</strong> {contact.name}</p>
+            <p><strong>Mobile:</strong> {contact.mobile}</p>
+            <p><strong>Email:</strong> {contact.email}</p>
+            <button onClick={onClose}>Close</button>
+        </div>
+    );
+};
 
-export default ViewContactDetails
+export default ViewContactDetails;
